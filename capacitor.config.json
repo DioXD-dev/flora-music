@@ -1,0 +1,8 @@
+{
+  "appId": "com.dioxd.floramusic",
+  "appName": "Flora",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
