@@ -37,16 +37,12 @@ jobs:
           npx cap add android || true
           npx cap sync android
 
-      # 6. Generate all icons & splash for Android
-      - name: Generate app icons
-        run: npx capacitor-assets generate --all --android
-
-      # 7. Decode keystore dari secret
+      # 6. Decode keystore dari secret
       - name: Decode keystore
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/flora.keystore
 
-      # 8. Build release APK
+      # 7. Build release APK
       - name: Build Release APK
         working-directory: android
         run: |
@@ -57,7 +53,7 @@ jobs:
             -Pandroid.injected.signing.key.alias=${{ secrets.KEY_ALIAS }} \
             -Pandroid.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
 
-      # 9. Upload APK artifact
+      # 8. Upload APK artifact
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
