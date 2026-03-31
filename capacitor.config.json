@@ -1,8 +1,11 @@
 {
   "appId": "com.dioxd.floramusic",
-  "appName": "Flora",
+  "appName": "Flora Music",
   "webDir": "www",
-  "server": {
-    "androidScheme": "https"
+  "plugins": {},
+  "android": {
+    "backgroundColor": "#FFFFFF",
+    "icon": "resources/android/icon-foreground.png",
+    "splash": "resources/android/icon-background.png"
   }
 }
